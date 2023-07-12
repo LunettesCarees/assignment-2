@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Image Gallery | COMP1073 Client-Side JavaScript</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/imageGallery.js" defer></script>
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script src="js/imageGallery.js" defer></script> -->
+  </head>
 
-<body>
+  <body>
     <h1>Image Gallery</h1>
     <section id="gallery">
-        <figure>
-            <img src="images/flowers-pink-large.jpg" alt="photo of pink flowers" width="1200" height="800" />
-            <figcaption>photo of pink flowers</figcaption>
-        </figure>
-        <ul>
-            <li><img src="images/flowers-pink-small.jpg" alt="photo of pink flowers" /></li>
-            <li><img class="inactive" src="images/flowers-purple-small.jpg" alt="photo of purple flowers" /></li>
-            <li><img class="inactive" src="images/flowers-red-small.jpg" alt="photo of red flowers" /></li>
-            <li><img class="inactive" src="images/flowers-white-small.jpg" alt="photo of white flowers" width="240" height="160" /></li>
-            <li><img class="inactive" src="images/flowers-yellow-small.jpg" alt="photo of yellow flowers" /></li>
-        </ul>
+      <figure>
+        <img
+          src="images/flowers-pink-large.jpg"
+          alt="photo of pink flowers"
+          width="1200"
+          height="800"
+        />
+        <figcaption>photo of pink flowers</figcaption>
+      </figure>
+      <ul id="thumbnail-list"></ul>
     </section>
-    <script src="js/gallery.js">
-    </script>
+    <script src="js/imageGallery.js"></script>
     <!-- PHOTO CREDITS
 	Sunflowers in the hamlet Dernekamp, Kirchspiel, Dülmen, North Rhine-Westphalia, Germany
 	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=61514522
@@ -41,6 +38,5 @@
 	Market in Münster, North Rhine-Westphalia, Germany
 	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=62071586
 	-->
-</body>
-
+  </body>
 </html>

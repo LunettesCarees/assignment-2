@@ -12,6 +12,7 @@ figure img {
 ul {
     flex-direction: row-reverse;
     max-width: 25vw;
+    list-style: none;
 }
 
 ul img {
@@ -22,6 +23,7 @@ ul img {
 
 .inactive {
     opacity: 25%;
+    filter: grayscale(75%);
 }
 
 h1 {
