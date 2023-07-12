@@ -1,0 +1,35 @@
+section {
+    display: flex;
+}
+
+figure img {
+    max-width: 75vw;
+    max-height: 80vh;
+    height: auto;
+    aspect-ratio: 1200 / 800;
+}
+
+ul {
+    flex-direction: row-reverse;
+    max-width: 25vw;
+}
+
+ul img {
+    width: 12vw;
+    height: auto;
+    aspect-ratio: 240/ 160;
+}
+
+.inactive {
+    opacity: 25%;
+}
+
+h1 {
+    width: 60vw;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 250%;
+    text-align: center;
+}
