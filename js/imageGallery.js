@@ -22,7 +22,6 @@ function buildGalleryItemList() {
 }
 
 galleryItemList = buildGalleryItemList();
-console.log(galleryItemList);
 
 function buildThumbnailList() {
     const ul = document.getElementById("thumbnail-list");
