@@ -6,29 +6,33 @@ const imageUrls = [
     "images/flowers-yellow-small.jpg",
 ];
 
-// function buildGalleryObjectList() {
-//     const galleryObjectList = [];
-//     imageUrls.forEach((imageUrl) => {
-//         let color = imageUrl.split("-")[1];
-//         const galleryObject = {
-//             imageUrl: imageUrl,
-//             title: "Photo of " + color + " flowers",
-//         };
-//         galleryObjectList.push(galleryObject);
-//     })
-// };
+function buildGalleryItemList() {
+    const galleryItemList = [];
+    let galleryItem = {};
+    imageUrls.forEach((imageUrl) => {
+        let color = imageUrl.split("-")[1];
+        galleryItem = {
+            src: imageUrl,
+            alt: "Photo of " + color + " flowers",
+            classList: "inactive",
+        };
+        galleryItemList.push(galleryItem);
+    });
+    return galleryItemList;
+}
 
+galleryItemList = buildGalleryItemList();
+console.log(galleryItemList);
 
 function buildThumbnailList() {
     const ul = document.getElementById("thumbnail-list");
 
-    imageUrls.forEach((imageUrl) => {
-        let color = imageUrl.split("-")[1];
+    galleryItemList.forEach((galleryItem) => {
         const li = document.createElement("li");
         const img = document.createElement("img");
-        img.src = imageUrl;
-        img.alt = "Photo of " + color + " flowers";
-        img.classList.add("inactive");
+        img.src = galleryItem.src;
+        img.alt = galleryItem.alt;
+        img.classList.add(galleryItem.classList);
 
         li.appendChild(img);
         ul.appendChild(li);
@@ -36,6 +40,21 @@ function buildThumbnailList() {
 
     const thumbnailImages = ul.querySelectorAll("li img");
     return thumbnailImages;
+
+    // imageUrls.forEach((imageUrl) => {
+    //     let color = imageUrl.split("-")[1];
+    //     const li = document.createElement("li");
+    //     const img = document.createElement("img");
+    //     img.src = imageUrl;
+    //     img.alt = "Photo of " + color + " flowers";
+    //     img.classList.add("inactive");
+
+    //     li.appendChild(img);
+    //     ul.appendChild(li);
+    // });
+
+    // const thumbnailImages = ul.querySelectorAll("li img");
+    // return thumbnailImages;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
